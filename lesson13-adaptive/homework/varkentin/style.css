@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Sen';
+    src: url(Sen-Regular.ttf);
+}
+
+@media (min-width: 0px) {
+        .work_expereance_text_opisanie{
+            font-size: 32px;
+        }
+}
+
+@media (min-width: 361px) {
+    .work_expereance{
+        display: grid;
+        justify-content: start;
+        grid-template-areas: 
+        "comp comp comp" 
+        "one two  three"
+        "goo fac dri" 
+        "i ive istart";
+        grid-template-rows: 216px  144px 72px 216px;
+        grid-column-gap: 7%;
+        grid-row-gap: 0;
+    }
+
+    .work_expereance_text_opisanie{
+        font-size: 55px;
+    
+}
+}
+
+@media (min-width: 769px){
+    .work_expereance{
+        max-width: 1440px;
+    }
+        
+    }
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+   }
+   
+    body{
+        display: flex;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+        font-family: 'Sen';
+    }
+
+    .work_expereance{
+        background-color: black;
+    }
+
+    .work_expereance_work{
+        color: #8491A0;
+        font-size: 16px;
+        line-height: 150%; 
+        text-transform: uppercase;
+        font-weight: 700;
+        }
+        
+        .work_expereance_text_opisanie{
+            color: #FFF;
+            line-height: normal;
+            font-weight: 700;
+        }
+        
+        .work_expereance_number{
+            color: #8491A0;
+            font-size: 117px;
+            font-weight: 400;
+            line-height: normal;
+        }
+   
+
+        
+        .work_expereance_green_text, .work_expereance_pink_text, .work_expereance_blue_text, .work_expereance_white_text{
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
+        .work_expereance_gray_text{
+            color: #8491A0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+        
+        .work_expereance_green_text{
+        color: #3CC74E;
+        }
+        
+        .work_expereance_pink_text{
+            color: #E95D90;
+        }
+        
+        .work_expereance_blue_text{
+            color: #609BFF;
+        }
+        
+        .work_expereance_white_text{
+        color: #FFF;
+        }
+       
+
+        .work_expereance > .div {
+            padding: 15%;
+        }
+        
+        .work_expereance_text{
+            grid-area: comp;
+        };
+        
+        .work_expereance_one{
+            grid-area: one;
+          
+        };
+        .work_expereance_two{
+            grid-area: two;
+           
+        }
+        
+        .work_expereance_three{
+            grid-area: three;
+           
+        }
+        
+        .work_expereance_google{
+            grid-area: goo;
+            
+        }
+        .work_expereance_facebook{
+            grid-area: fac;
+        }
+           
+        .work_expereance_dribbble{
+            grid-area: dri;
+           
+        
+        }
+        .work_expereance_i{
+            grid-area:i;
+        
+        }
+        .work_expereance_ive{
+            grid-area: ive;
+            
+        }
+        .work_expereance_istart{
+            grid-area: istart;
+           
+        }
+
+
+
+
+
+
+
+
