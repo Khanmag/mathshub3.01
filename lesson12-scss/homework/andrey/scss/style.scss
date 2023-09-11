@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Sen Regular';
+    src: url(../fonts/Sen-Regular.ttf);
+}
+@font-face {
+    font-family: 'Sen Bold';
+    src: url(../fonts/Sen-SemiBold.ttf);
+}
+
+@import "./default.scss";
+
+$colorBase: #000000;    // Base
+$colorWhite: #ffffff;
+$colorGrey: #8491a0;    // Dark Grey
+$colorGreen: #3cc74e;   // Green Accent
+$colorBlue: #609bff;    // Primary
+$colorRed: #e95d90;     // Pink Accent
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: $colorBase;
+    max-width: 1440px;
+    width: 100vw;
+}
+
+.work_experience {
+    height: 715px;
+    padding: 120px 72px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 32px 172px 271px;
+    justify-content: start;
+    align-content: start;
+    column-gap: 24px;
+
+    div:nth-child(1) {
+        grid-column: span 3;
+        font-family: 'Sen Regular';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: $colorGrey;
+    }
+
+    div:nth-child(2) {
+        grid-column: span 3;
+        font-family: 'Sen Bold';
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 66.17px;
+        color: $colorWhite;
+        max-width: 800px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button {
+        width: 416px;
+        height: 271px;
+        background-color: transparent;
+        border: transparent;
+        text-align: start;
+
+        p:nth-child(1) {
+            font-family: 'Sen Regular';
+            font-weight: 400;
+            font-size: 117px;
+            line-height: 140.77px;
+            color: $colorGrey;
+            max-width: 126px;
+            max-height: 141px;
+        }
+
+        p:nth-child(2) {
+            font-family: 'Sen Regular';
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            color: $colorWhite;
+            height: 56px;
+        }
+
+        p:nth-child(3) {
+            font-family: 'Sen Regular';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $colorGrey;
+            max-width: 370px;
+            max-height: 36px;
+        }
+    }
+
+    div:nth-child(3) span {
+        color: $colorGreen;
+    }
+
+    div:nth-child(4) span {
+        color: $colorBlue;
+    }
+
+    div:nth-child(5) span {
+        color: $colorRed;
+    }
+}
