@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://olimpintegra.ru/upload/iblock/8a2/8a2c65cf789b7c0fc9e2f43ed66d980a.png');
+            background-position: center;
+            background-size: 100%;
+            animation: ball 2s linear 0s infinite;
+            /* animation-name: ball; */
+            /* animation-duration: 2s; */
+            animation-timing-function: linear;
+            /* animation-direction: alternate; */
+            margin: 800px auto;
+        }
+        @keyframes ball {
+            0% {
+
+            }
+            50% {
+                animation-timing-function: ease-in;
+                transform: translateY(-600px) rotate(360deg);
+            }
+            100% {
+                animation-timing-function: ease-out;
+                transform: translateY(0px) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
