@@ -18,6 +18,7 @@ body div.container {
   background-color: black;
 }
 body div.container header {
+  position: absolute;
   padding: 0 calc(20px + 52 * ((100vw - 360px) / (1440 - 360)));
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -28,6 +29,9 @@ body div.container header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  z-index: 3;
 }
 body div.container header div {
   height: 24px;
@@ -40,6 +44,7 @@ body div.container header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: end;
 }
 body div.container header nav button {
   padding: calc(12px + 20 * ((100vw - 361px) / (1440 - 361))) calc(12px + 12 * ((100vw - 361px) / (1440 - 361)));
@@ -55,7 +60,7 @@ body div.container header nav button a {
   color: white;
   text-decoration: none;
   font-family: Sen;
-  font-size: calc(10px + 6 * ((100vw - 360px) / (1440 - 360)));
+  font-size: calc( min(10px + 6 * ((100vw - 360px) / (768 - 360)), 16px) );
   font-weight: 400;
   line-height: 150%;
   /* 24px */
@@ -76,6 +81,18 @@ body div.container header nav button:hover {
     color: white;
   }
 }
+body div.container main section.main_screen {
+  position: relative;
+}
+body div.container main section.main_screen img.background_grey {
+  position: absolute;
+  background-repeat: repeat-y;
+  top: 0;
+  right: 0;
+  max-width: 62.5%;
+  height: 100%;
+  z-index: 0;
+}
 body div.container main section.main_screen div.portrait {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -83,13 +100,14 @@ body div.container main section.main_screen div.portrait {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 0px 84px;
+  padding: calc( min(48px + 118 * ((100vw - 360px) / (1440 - 360)), 166px) ) 0px 84px;
 }
-body div.container main section.main_screen div.portrait img {
-  width: calc(55vw);
+body div.container main section.main_screen div.portrait img.main,
+body div.container main section.main_screen div.portrait .plane {
+  width: 52%;
   max-height: 650px;
   max-width: 750px;
-  z-index: 1;
+  z-index: 2;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -97,6 +115,9 @@ body div.container main section.main_screen div.portrait img.plane {
   display: none;
 }
 @media screen and (max-width: 960px) {
+  body div.container main section.main_screen div.portrait img.background_grey {
+    display: none;
+  }
   body div.container main section.main_screen div.portrait img.plane {
     display: block;
   }
@@ -105,11 +126,16 @@ body div.container main section.main_screen div.portrait img.plane {
   }
 }
 @media screen and (max-width: 360px) {
+  body div.container main section.main_screen div.portrait img.background_grey {
+    display: none;
+  }
   body div.container main section.main_screen div.portrait img.plane {
     display: none;
   }
   body div.container main section.main_screen div.portrait img.main {
     display: block;
+    width: 100%;
+    max-height: 288px;
   }
 }
 body div.container main section.main_screen div.portrait h2 {
@@ -143,14 +169,14 @@ body div.container main section.main_screen div.portrait h2 p {
 @media screen and (max-width: 360px) {
   body div.container main section.main_screen div.portrait {
     display: block;
-    padding: 0;
+    padding-bottom: 48px;
   }
   body div.container main section.main_screen div.portrait img {
-    width: calc(100vw);
+    width: 100vw;
   }
   body div.container main section.main_screen div.portrait h2 {
+    margin: 0;
     max-width: 100%;
-    width: 320px;
     position: static;
     padding: 48px calc(20px + 52 * ((100vw - 360px) / (1440 - 360)));
   }
@@ -166,6 +192,7 @@ body div.container main section.experience h6 {
   font-size: 16px;
   font-weight: 700;
   color: #8491a0;
+  padding-bottom: 8px;
 }
 body div.container main section.experience h3 {
   display: -webkit-box;
@@ -218,6 +245,84 @@ body div.container main section.experience div div p {
 }
 @media screen and (max-width: 360px) {
   body div.container main section.experience div div {
+    width: 100%;
+  }
+}
+body div.container main section.philosophy-values {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+body div.container main section.philosophy-values div {
+  background: #fff3e4;
+  height: 600px;
+  max-width: 50%;
+}
+body div.container main section.philosophy-values div div {
+  max-width: 100%;
+  padding: calc( min(48px + 72 * ((100vw - 360px) / (1440 - 360)), 120px) ) calc(20px + 52 * ((100vw - 360px) / (1440 - 360)));
+}
+body div.container main section.philosophy-values div div h2 {
+  color: #181823;
+  font-size: calc( min(32px + 23 * ((100vw - 360px) / (768 - 360)), 55px) );
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+body div.container main section.philosophy-values div div p.content {
+  color: #5b6876;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 27px */
+  padding-top: 24px;
+  padding-bottom: 134px;
+}
+body div.container main section.philosophy-values div div a.link {
+  color: #181823;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  border-bottom: 1px solid #8491a0;
+  padding-bottom: 4px;
+}
+body div.container main section.philosophy-values img {
+  height: 600px;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body div.container main section.philosophy-values img.img-1440 {
+  display: block;
+}
+body div.container main section.philosophy-values img.img-768 {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  body div.container main section.philosophy-values img.img-1440 {
+    display: none;
+  }
+  body div.container main section.philosophy-values div div p.content {
+    padding-bottom: 67px;
+  }
+  body div.container main section.philosophy-values img.img-768 {
+    display: block;
+  }
+}
+@media screen and (max-width: 536px) {
+  body div.container main section.philosophy-values {
+    display: block;
+  }
+  body div.container main section.philosophy-values div {
+    max-width: 100%;
+    height: 450px;
+  }
+  body div.container main section.philosophy-values div div p.content {
+    padding-bottom: 90px;
+  }
+  body div.container main section.philosophy-values img {
+    height: 450px;
     width: 100%;
   }
 }

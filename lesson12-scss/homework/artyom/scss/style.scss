@@ -4,8 +4,9 @@ $color-green: #3cc74e;
 $color-blue: #609bff;
 $color-purple: #5221e6;
 $color-pink: #e95d90;
-$color-grey: #8491a0;
-$color-dark-grey: #181823;
+$color-light-grey: #8491a0;
+$color-dark-grey: #5b6876;
+$color-level-1: #181823;
 $row-padding: calc(20px + 52 * ((100vw - 360px) / (1440 - 360)));
 $mb-padding: 12px 20px;
 $px-24: 24px;
@@ -16,7 +17,6 @@ $px-24: 24px;
   box-sizing: border-box;
 }
 body {
-  // background-color: $body-background-color;
   background-color: #070707;
   color: $color-white;
   text-decoration: none;
@@ -29,10 +29,14 @@ body {
     background-color: $body-background-color;
 
     header {
+      position: absolute;
       padding: 0 $row-padding;
       align-items: center;
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      max-width: 1440px;
+      z-index: 3;
 
       div {
         height: $px-24;
@@ -45,6 +49,7 @@ body {
 
       nav {
         display: flex;
+        justify-self: end;
 
         button {
           padding: calc(12px + 20 * ((100vw - 361px) / (1440 - 361)))
@@ -59,7 +64,9 @@ body {
             color: $color-white;
             text-decoration: none;
             font-family: Sen;
-            font-size: calc(10px + 6 * ((100vw - 360px) / (1440 - 360)));
+            font-size: calc(
+              min(10px + 6 * ((100vw - 360px) / (768 - 360)), 16px)
+            );
             font-weight: 400;
             line-height: 150%; /* 24px */
           }
@@ -87,16 +94,30 @@ body {
     }
     main {
       section.main_screen {
+        position: relative;
+        img.background_grey {
+          position: absolute;
+          background-repeat: repeat-y;
+          top: 0;
+          right: 0;
+          max-width: 62.5%;
+          height: 100%;
+          z-index: 0;
+        }
         div.portrait {
           display: inline-flex;
           align-items: center;
-          padding: 80px 0px 84px;
+          padding: calc(
+              min(48px + 118 * ((100vw - 360px) / (1440 - 360)), 166px)
+            )
+            0px 84px;
 
-          img {
-            width: calc(55vw);
+          img.main,
+          .plane {
+            width: 52%;
             max-height: 650px;
             max-width: 750px;
-            z-index: 1;
+            z-index: 2;
             object-fit: cover;
           }
 
@@ -104,6 +125,9 @@ body {
             display: none;
           }
           @media screen and (max-width: 960px) {
+            img.background_grey {
+              display: none;
+            }
             img.plane {
               display: block;
             }
@@ -112,11 +136,16 @@ body {
             }
           }
           @media screen and (max-width: 360px) {
+            img.background_grey {
+              display: none;
+            }
             img.plane {
               display: none;
             }
             img.main {
               display: block;
+              width: 100%;
+              max-height: 288px;
             }
           }
           h2 {
@@ -140,15 +169,6 @@ body {
             }
           }
         }
-        // div.background_grey {
-        //   background-color: $color-dark-grey;
-        //   position: absolute;
-        //   top: 0;
-        //   left: auto;
-        //   width: calc(63%);
-        //   height: 894px;
-        //   z-index: 0;
-        // }
         @media screen and (max-width: 1440px) {
           div.background_grey {
             align-self: flex-end;
@@ -162,15 +182,15 @@ body {
         @media screen and (max-width: 360px) {
           div.portrait {
             display: block;
-            padding: 0;
+            padding-bottom: 48px;
 
             img {
-              width: calc(100vw);
+              width: 100vw;
             }
 
             h2 {
+              margin: 0;
               max-width: 100%;
-              width: 320px;
               position: static;
               padding: 48px $row-padding;
 
@@ -188,7 +208,8 @@ body {
         h6 {
           font-size: 16px;
           font-weight: 700;
-          color: $color-grey;
+          color: $color-light-grey;
+          padding-bottom: 8px;
         }
         h3 {
           display: flex;
@@ -210,7 +231,7 @@ body {
             h3 {
               font-size: 117px;
               font-weight: 400;
-              color: $color-grey;
+              color: $color-light-grey;
             }
             h4 {
               font-size: 24px;
@@ -229,7 +250,7 @@ body {
             p {
               font-size: 16px;
               font-weight: 400;
-              color: $color-grey;
+              color: $color-light-grey;
             }
           }
           @media screen and (max-width: 536px) {
@@ -241,6 +262,95 @@ body {
             div {
               width: 100%;
             }
+          }
+        }
+      }
+      section.philosophy-values {
+        display: inline-flex;
+        div {
+          background: #fff3e4;
+          height: 600px;
+          max-width: 50%;
+
+          div {
+            max-width: 100%;
+            padding: calc(
+                min(48px + 72 * ((100vw - 360px) / (1440 - 360)), 120px)
+              )
+              $row-padding;
+            h2 {
+              color: $color-level-1;
+              font-size: calc(
+                min(32px + 23 * ((100vw - 360px) / (768 - 360)), 55px)
+              );
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+            p.content {
+              color: $color-dark-grey;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%; /* 27px */
+              padding-top: 24px;
+              padding-bottom: 134px;
+            }
+            a.link {
+              color: $color-level-1;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              border-bottom: 1px solid $color-light-grey;
+              padding-bottom: 4px;
+            }
+          }
+        }
+
+        img {
+          height: 600px;
+          width: 50%;
+          object-fit: cover;
+        }
+        img.img-1440 {
+          display: block;
+        }
+        img.img-768 {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        section.philosophy-values {
+          img.img-1440 {
+            display: none;
+          }
+          div {
+            div {
+              p.content {
+                padding-bottom: 67px;
+              }
+            }
+          }
+          img.img-768 {
+            display: block;
+          }
+        }
+      }
+      @media screen and (max-width: 536px) {
+        section.philosophy-values {
+          display: block;
+          div {
+            max-width: 100%;
+            height: 450px;
+            div {
+              p.content {
+                padding-bottom: 90px;
+              }
+            }
+          }
+          img {
+            height: 450px;
+            width: 100%;
           }
         }
       }
