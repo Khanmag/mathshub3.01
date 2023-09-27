@@ -1,0 +1,79 @@
+
+
+.flex > article{
+    display: flex;
+    gap: 10px;
+    max-width: 260px;
+    padding: 15px;
+    background-color: gray;
+    border-radius: 10px;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+.flex > article > div{
+   width: 50px;
+   height: 50px;
+   background-color: bisque;
+   border-radius: 15px;
+   text-align: center;
+   line-height: 3em;
+
+
+}
+
+
+.grid > article{
+    padding: 15px;
+    display: grid;
+    width: 300px;
+    background-color: lightgray;
+    border-radius: 10px;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 4px;
+}
+.grid > article > div{
+    background-color: darkgray;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 3em;
+    color: white;
+    font-size: 28px;
+    
+}
+.animation > div{
+    width: 1000px;
+    background-color: aqua;
+    height: 500px;
+    object-position: bottom;
+}
+
+
+  .animation > div > img {
+  margin-top: 300px;
+  width: 30%;
+  animation-duration: 3s;
+  animation-name: topor;
+  width: 200px;
+
+  
+  }
+  @keyframes topor {
+
+   from {
+      margin-top: 0;
+      margin-left: 0;
+      transform: rotate(0deg);
+    }
+    50% {
+        margin-top: 100px;
+        margin-left: 500px;
+        margin-top: 100px;
+      }
+    to {
+        margin-left: 600px;
+        transform: rotate(560deg);
+        margin-top: 200px;
+      }
+  }
+
