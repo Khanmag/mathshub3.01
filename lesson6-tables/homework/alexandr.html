@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы, списки, изображения</title>
+    <style>
+        table,
+        table * {
+            border: 1px solid rgb(169, 226, 204);
+            background-color: rgb(230, 240, 250);
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <table>
+            <tr>
+                <th rowspan="2">Кухня</th>
+                <th colspan="2">Холодные блюда</th>
+                <th colspan="2">Горячие блюда</th>
+                <th rowspan="2">Десерты</th>
+            </tr>
+            <tr>
+                <th>Салаты</th>
+                <th>Закуски</th>
+                <th>Первые блюда</th>
+                <th>Вторые блюда</th>
+            </tr>
+            <tr>
+                <th rowspan="3">Русская</th>
+                <td>Винегрет</td>
+                <td>Язык с хреном</td>
+                <td>Щи с квашеной капустой</td>
+                <td>Вареники с картошкой</td>
+                <td>Печёные яблоки с мёдом</td>
+            </tr>
+            <tr>
+                <td>Оливье</td>
+                <td>Студень свежий</td>
+                <td>Рассольник домашний</td>
+                <td>Караси запечённые в сметане</td>
+                <td>Блинчатый пирог</td>
+            </tr>
+            <tr>
+                <td>Сельдь под шубой</td>
+                <td>Судак заливной</td>
+                <td>Мясная солянка</td>
+                <td>Котлеты "Пожарские"</td>
+                <td>Пирожное "Картошка"</td>
+            </tr>
+        </table>
+    </section> <br>
+
+    <section>
+        <picture>
+            <source 
+                srcset="https://img.buzzfeed.com/buzzfeed-static/static/2020-02/17/11/asset/d036257a5c57/sub-buzz-214-1581938686-1.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" 
+                media="(max-width:400px)">
+            <source
+                srcset="https://images.yen.com.gh/images/12c6b4929d74869f.jpg"
+                media="(max-width:600px)">
+            <source
+                srcset="https://i.ytimg.com/vi/HHgpcQaGHMU/maxresdefault.jpg"
+                media="(max-width:800px)">
+            <source
+                srcset="https://www.pngmart.com/files/Anime-Food-PNG-Free-Download.png"
+                media="(max-width:1200px)">
+            <source
+                srcset="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/roast_pork28anime-29.jpg"
+                media="(max-width:1440px)">
+            <img src="https://images.yen.com.gh/images/12c6b4929d74869f.jpg">
+        </picture>
+    </section>
+</body>
+
+</html>
