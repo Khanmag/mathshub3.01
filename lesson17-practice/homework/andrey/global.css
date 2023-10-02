@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --viewport__width-max: 1100px;
+    --viewport__width-min: 800px;
+    --border__size: 1rem;
+    --margin__size: 2rem;
+    /* color scheme */
+    --body__background__color: #9fedd7;     /* --color-base-2 */
+    --background__color-header: #026670;    /* --color-base-1 */
+    --text__color-header: #fce181;          /* --color-text-4 */
+    --text__color-main: black;              /* --color-text-1 */
+    --viewport__background__color: #fce181; /* --color-base-4 */
+    --viewport__border__color: #fef9c7;     /* --color-base-3 */
+    --viewport__header__color: grey;        /* --color-text-2 */
+    --anchor__color-main: cornflowerblue;   /* --color-text-5 */
+    --anchor__color-hover: darkturquoise;   /* --color-text-6 */
+}
+
+body {
+    /* font */
+    font-family: Arial;
+    color: var(--text__color-main);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    /* self */
+    background-color: var(--body__background__color);
+    /* kids */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer {
+    /* self */
+    color: var(--text__color-header);
+    max-width: var(--viewport__width-max);
+    min-width: var(--viewport__width-min);
+    width: 100vw;
+    background-color: var(--background__color-header);
+    padding: var(--border__size);
+    /* kids */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    /* self */
+    width: 100%;
+    /* kids */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section {
+    /* self */
+    max-width: var(--viewport__width-max);
+    min-width: var(--viewport__width-min);
+    width: 100vw;
+    min-height: 500px;
+    background-color: var(--viewport__background__color);
+    margin: var(--margin__size) 0;
+    padding: var(--border__size);
+    border: var(--border__size) solid var(--viewport__border__color);
+    /* kids */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section > h2 {
+    color: var(--viewport__header__color);
+}
+
+section a {
+    align-self: end;
+}
+
+a {
+    color: var(--anchor__color-main);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--anchor__color-hover);
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 4rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}

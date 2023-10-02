@@ -1,0 +1,27 @@
+/* practice__animation */
+
+.practice__animation img {
+    width: calc(1000px / 5);
+    height: calc(1150px / 5);
+    top: 0px;
+    left: -200px;
+    position: relative;
+    animation-name: axe;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes axe {
+    0% {
+        transform: translate(0px, -50px);
+    }
+    50% {
+        transform: translate(400px, 50px) rotate(130deg);
+    }
+    100% {
+        transform: translate(400px, 50px) rotate(130deg);
+    }
+}

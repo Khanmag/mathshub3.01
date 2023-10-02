@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrey">
+    <meta name="description" content="homework 25.09.2023">
+    <meta name="keywords" content="practice, HTML, CSS, table, flex, picture, grid, animation">
+    <!-- Favicon -->
+    <link rel="icon" href="./ico/favicon.ico">
+    <title>Andrey's homework at 25.09.2023</title>
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./css/practice__table-table.css">
+    <link rel="stylesheet" href="./css/practice__table-grid.css">
+    <link rel="stylesheet" href="./css/practice__text.css">
+    <link rel="stylesheet" href="./css/practice__picture.css">
+    <link rel="stylesheet" href="./css/practice__flex.css">
+    <link rel="stylesheet" href="./css/practice__grid.css">
+    <link rel="stylesheet" href="./css/practice__animation.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Andrey's Great Practice</h1>
+        <nav>
+            <a href="#1-practice__table-table">Таблица (table)</a>
+            <a href="#2-practice__table-grid">Таблица (grid)</a>
+            <a href="#3-practice__text">Текстовые теги</a>
+            <a href="#4-practice__picture">@media + picture</a>
+            <a href="#5-practice__flex">Flex</a>
+            <a href="#6-practice__grid">Grid</a>
+            <a href="#7-practice__animation">Animation</a>
+        </nav>
+    </header>
+    <main>        
+        <section id="1-practice__table-table">
+            <h2>Таблица (table)</h2>
+            <article class="practice__table-table">
+                <table>
+                    <tr>
+                        <td rowspan="2" class="practice__table-table__img">
+                            <img src="./img/heart_with_fruits.png" alt="heart with fruits">
+                        </td>
+                        <td><span>Витамин A</span></td>
+                        <td><span>Витамин C</span></td>
+                        <td><span>Витамин D</span></td>
+                        <td><span>Витамин E</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Морковь</span></td>
+                        <td><span>Апельсин</span></td>
+                        <td><span>Желток</span></td>
+                        <td><span>Салат</span></td>
+                    </tr>
+                </table>
+            </article>
+            <a href="#header">Go to Menu</a>
+        </section>
+        <section id="2-practice__table-grid">
+            <h2>Таблица (grid)</h2>
+            <article class="practice__table-grid">
+                <div class="practice__table-grid__img">
+                    <img src="./img/heart_with_fruits.png" alt="heart with fruits">
+                </div>
+                <div><span>Витамин A</span></div>
+                <div><span>Витамин C</span></div>
+                <div><span>Витамин D</span></div>
+                <div><span>Витамин E</span></div>
+                <div><span>Морковь</span></div>
+                <div><span>Апельсин</span></div>
+                <div><span>Желток</span></div>
+                <div><span>Салат</span></div>
+            </article>
+            <a href="#header">Go to Menu</a>
+        </section>
+        <section id="3-practice__text">
+            <h2>Текстовые теги</h2>
+            <article class="practice__text">
+                <h2>Fe<sub>3</sub>O4 + H<sub>2</sub> &rarr; 3Fe + 4H<sub>2</sub>O</h2>
+                <br><br>
+                <h2><em><strong>x</strong></em><sup>3</sup> - 3<em><strong>x</strong></em><sup>2</sup> + 2 = 0</h2>
+            </article>
+            <a href="#header">Go to Menu</a>
+        </section>
+        <section id="4-practice__picture">
+            <h2>@media + picture</h2>
+            <div class="practice__picture">
+                <picture>
+                    <source srcset="./img/picture_red.jpg" media="(max-width: 600px)">
+                    <source srcset="./img/picture_green.jpg" media="(max-width: 800px)">
+                    <source srcset="./img/picture_blue.jpg" media="(max-width: 1080px)">
+                    <img src="./img/picture_white.jpg" alt="rainbow">
+                </picture>
+            </div>
+            <a href="#header">Go to Menu</a>
+        </section>
+        <section id="5-practice__flex">
+            <h2>Flex</h2>
+            <article class="practice__flex">
+                <div><span>A</span></div>
+                <div><span>B</span></div>
+                <div><span>C</span></div>
+                <div><span>D</span></div>
+                <div><span>E</span></div>
+                <div><span>F</span></div>
+                <div><span>+</span></div>
+            </article>
+            <a href="#header">Go to Menu</a>
+        </section>
+        <section id="6-practice__grid">
+            <h2>Grid</h2>
+            <article class="practice__grid">
+                <div><span>1</span></div>
+                <div><span>2</span></div>
+                <div><span>3</span></div>
+                <div><span>4</span></div>
+                <div><span>5</span></div>
+                <div><span>6</span></div>
+                <div><span>7</span></div>
+                <div><span>8</span></div>
+                <div><span>9</span></div>
+                <div><span>*</span></div>
+                <div><span>0</span></div>
+                <div><span>#</span></div>
+            </article>
+            <a href="#header">Go to Menu</a>
+        </section>
+        <section id="7-practice__animation">
+            <h2>Animation</h2>
+            <div class="practice__animation">
+                <img src="./img/axe.png" alt="axe">
+            </div>
+            <a href="#header">Go to Menu</a>
+        </section>
+    </main>
+    <footer>
+        <h3>See you later <a href="#header">alligator</a> ! &#128540;</h3>
+        <h2>Ideal Footer for Andrey's personal page</h2>
+    </footer>
+</body>
+</html>
