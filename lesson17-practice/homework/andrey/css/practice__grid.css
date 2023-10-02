@@ -1,0 +1,26 @@
+/* practice__grid */
+
+.practice__grid {
+    /* self */
+    width: 300px;
+    padding: 15px;
+    background-color: lightgray;
+    border-radius: 20px;
+    /* kids */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.practice__grid div {
+    /* self */
+    height: 90px;
+    border-radius: 10px;
+    background-color: darkgray;
+    /* kids */
+    font-size: 35px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
