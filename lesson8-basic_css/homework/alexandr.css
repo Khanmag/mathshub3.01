@@ -1,25 +1,32 @@
-div{
+div {
     font-size: 20px;
 }
-div{
+
+div {
     background-color: yellow;
 }
-div~div{
+
+div~div {
     background-color: transparent;
 }
-p+span{
+
+p+span {
     font-weight: 900;
 }
-p{
+
+p {
     color: red;
 }
-*~p{
+
+*~p {
     color: black;
 }
-h2+p, h2+span{
+
+h2+p, h2+span {
     font-style: italic;
 }
-#my_p+*{
+
+#my_p+* {
     background-color: black;
     color: white;
 }
