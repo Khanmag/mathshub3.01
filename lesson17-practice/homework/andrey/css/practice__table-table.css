@@ -1,0 +1,27 @@
+/* practice__table-table */
+
+.practice__table-table table {
+    border: 1px solid black;
+}
+
+.practice__table-table tr {
+    height: 100px;
+}
+
+.practice__table-table td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.practice__table-table span {
+    display: flex;
+    width: max-content;
+}
+
+.practice__table-table img {
+    width: 100%;
+}
+
+.practice__table-table__img {
+    width: 230px;
+}

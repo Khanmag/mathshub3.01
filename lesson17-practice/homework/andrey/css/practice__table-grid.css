@@ -1,0 +1,26 @@
+/* practice__table-grid */
+
+.practice__table-grid {
+    display: grid;
+    width: max-content;
+    padding: 2px;
+    gap: 2px;
+    grid-template-columns: 230px repeat(4, max-content);
+    grid-template-rows: 100px 100px;
+    border: 1px solid black;
+}
+
+.practice__table-grid__img {
+    grid-row: span 2;
+}
+
+.practice__table-grid__img img {
+    width: 100%;
+}
+
+.practice__table-grid > * {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
