@@ -1,0 +1,32 @@
+/* practice__picture */
+
+.practice__picture {
+    width: 300px;
+    height: 100px;
+    margin: 100px auto;
+    border: 10px solid black;
+}
+
+.practice__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1080px) {
+    .practice__picture {
+        border-color: blue;
+    }
+}
+
+@media (max-width: 800px) {
+    .practice__picture {
+        border-color: green;
+    }
+}
+
+@media (max-width: 600px) {
+    .practice__picture {
+        border-color: red;
+    }
+}
