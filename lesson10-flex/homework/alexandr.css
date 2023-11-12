@@ -1,0 +1,34 @@
+section>div{
+    min-width: 50px;
+    min-height: 50px;
+    background-color: orange;
+    border: 1px solid black;
+}
+section{
+    margin: 30px auto;
+    display: flex;
+    width: 500px;
+    height: 400px;
+    background-color: black;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+}
+
+.div3{
+    align-self: flex-end;
+}
+.div10{
+    align-self: flex-start;
+    order: 2;
+}
+.div8{
+    align-self: flex-end;
+    order: 1;
+}
+.div9{
+    align-self: stretch;
+}
+
